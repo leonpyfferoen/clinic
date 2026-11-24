@@ -1,0 +1,49 @@
+/* A small reset so the page starts consistently. Leave these three rules. */
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; line-height: 1.6; color: #172554; background: #ffffff; }
+img { max-width: 100%; height: auto; }
+
+:root {
+  --accent: #0f766e;
+  --accent-dark: #115e59;
+  --accent-soft: #e6f4f1;
+  --line: #d6e4e1;
+}
+
+header { background: var(--accent); color: #ffffff; }
+.bar { max-width: 60rem; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.5rem 1.5rem; padding: 0.75rem 0; }
+.brand { font-weight: 700; font-size: 1.15rem; }
+nav a { color: #ffffff; text-decoration: none; font-weight: 600; }
+nav a:hover, nav a:focus { text-decoration: underline; }
+
+main { max-width: 60rem; margin: 0 auto; }
+.hero { display: grid; gap: 1.5rem; align-items: center; padding: 2rem 0; }
+.hero h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); line-height: 1.2; margin: 0 0 0.5rem; }
+.promise { font-size: 1.15rem; margin: 0 0 1rem; }
+.when { display: inline-block; background: var(--accent-soft); border-left: 4px solid var(--accent); padding: 0.5rem 0.9rem; margin: 0; font-weight: 600; }
+.hero img { border-radius: 12px; }
+
+section { padding: 1.5rem 0; border-top: 1px solid var(--line); }
+h2 { margin: 0 0 1rem; color: var(--accent-dark); }
+
+.prices { list-style: none; padding: 0; margin: 0 0 1.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: 1rem; }
+.prices li { background: var(--accent-soft); border-radius: 10px; padding: 1rem; }
+.prices strong { display: block; font-size: 1.6rem; color: var(--accent-dark); }
+
+.estimate, form { display: grid; gap: 0.4rem; max-width: 26rem; }
+label { font-weight: 600; margin-top: 0.5rem; }
+input, select { font: inherit; padding: 0.5rem 0.6rem; border: 1px solid #94a3b8; border-radius: 6px; }
+button { font: inherit; font-weight: 700; margin-top: 1rem; padding: 0.7rem 1rem; border: 0; border-radius: 6px; background: var(--accent); color: #ffffff; cursor: pointer; }
+button:hover, button:focus { background: var(--accent-dark); }
+output { font-weight: 700; font-size: 1.3rem; color: var(--accent-dark); }
+#message { font-weight: 600; }
+
+footer { border-top: 1px solid var(--line); margin-top: 2rem; padding-top: 1rem; padding-bottom: 1rem; text-align: center; font-size: 0.95rem; }
+
+@media (min-width: 700px) {
+  .hero { grid-template-columns: 3fr 2fr; }
+}
+
+input, select, button { max-width: 100%; }
+nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; }
+header, main, footer { padding-left: 1rem; padding-right: 1rem; }

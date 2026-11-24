@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <title>Saturday repair clinic · Campus Cycle</title>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <span class="brand">Campus Cycle · Saturday repair clinic</span>
+      <nav aria-label="Main">
+        <a href="#when">When and where</a>
+        <a href="#prices">Prices</a>
+        <a href="#book">Book a slot</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div>
+        <h1>Saturday repair clinic</h1>
+        <p class="promise">Bring your bicycle on Saturday afternoon and we look at it.</p>
+        <p class="when" id="when">Saturday, 15:00 to 17:00 · Workshop B, Student Centre</p>
+      </div>
+      <img src="images/bicycle.png" alt="A bicycle ready for a check-up at the Campus Cycle repair clinic">
+    </div>
+
+    <section id="prices">
+      <h2>Prices</h2>
+      <ul class="prices">
+        <li><strong>EUR 10</strong> a bicycle check</li>
+        <li><strong>EUR 5</strong> each small repair</li>
+        <li><strong>EUR 45</strong> a full service</li>
+      </ul>
+
+      <div class="estimate">
+        <h3>Estimate your price</h3>
+        <label for="service">Service</label>
+        <select id="service">
+          <option value="10">A check (EUR 10)</option>
+          <option value="45">A full service (EUR 45)</option>
+        </select>
+
+        <label for="repairs">Number of small repairs</label>
+        <input id="repairs" type="number" min="0" step="1" value="0">
+
+        <p>Your estimate: <output id="total" for="service repairs">EUR 10</output></p>
+      </div>
+    </section>
+
+    <section id="book">
+      <h2>Book a slot</h2>
+      <p>Each 30-minute slot takes 2 bicycles.</p>
+      <form id="booking">
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+
+        <label for="slot">Time slot</label>
+        <select id="slot" name="slot" required>
+          <option>15:00</option>
+          <option>15:30</option>
+          <option>16:00</option>
+          <option>16:30</option>
+        </select>
+
+        <button type="submit">Book this slot</button>
+      </form>
+      <p id="message" role="status"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Campus Cycle · Saturday repair clinic · Personal code: BW-ELB3</p>
+  </footer>
+</body>
+</html>
